@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Decrement</title>
+</head>
+<body>
+    <input type="button" value="+" onclick="increment()">
+    <div id="display">0</div>
+
+    <!-- <input type="button" value="-" onclick="decrement()">
+    <div id="display">10</div> -->
+    
+
+
+
+    <script>
+        var counter=0;
+        function increment ()
+        {
+            counter++;
+            const display = document.getElementById("display");
+            display.innerHTML=counter;
+            console.log(counter);
+        }
+
+        // var counter=10;
+        // function decrement ()
+        // {
+        //     counter--;
+        //     const display = document.getElementById("display");
+        //     display.innerHTML=counter;
+        //     console.log(counter);
+        // }
+    </script>
+</body>
+</html>
