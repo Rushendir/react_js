@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment/Decrement</title>
+    <style>
+        *{
+          margin: 0;
+          box-sizing: border-box;
+          font-family: sans-serif;
+          padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        span{
+            font-size: 100px;
+            padding: 10px;
+        }
+        .btn{
+            background: none;
+            outline: none;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>counter</h1>
+        <span id="counter">0</span>
+        <div class="btn-container">
+            <button class="btn increase" style="background-color: lawngreen;">Increment</button>
+            <button class="btn reset" style="background-color: antiquewhite;">Reset</button>
+            <button class="btn decrease" style="background-color: orange;">Decrement</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const counter = document.querySelector('#counter');
+        const btns = document.querySelectorAll('.btn');
+        btns.forEach((btn)=> {
+            btn.addEventListener('click',(e) => {
+                const styles = e.currentTarget.classList
+                if(styles.contains('increase')) {
+                    count++
+                }else if(styles.contains('decrease')) {
+                    count--
+                }else{
+                    count = 0
+                }
+                if (count > 0){
+                    counter.style.color ='green'
+                }
+                if (count < 0){
+                    counter.style.color ='red'
+                }
+                if (count === 0){
+                    counter.style.color ='grey'
+                }
+                counter.textContent = count
+
+            })
+        })
+    </script>
+</body>
+</html>
