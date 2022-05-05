@@ -1,0 +1,19 @@
+.count{
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.div1, .div2, .div3, .count{
+    display: inline-block;
+}
+.div3{
+    margin: 10px;
+}
+/* div{
+    background-color: yellow;
+} */
+.div1, .div3{
+    border-radius: 35px;
+    color: blue;
+    font-size: larger;
+}
